@@ -1,0 +1,121 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <title>Service de location de vélos</title>
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <!--Feuille de style générale et responsive-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--Feuille de style awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+</head>
+
+<body>
+    
+
+    <header>
+        <a href="index.html"><img src="images/logovelo.png" id="logo" alt="Logo velo Nantes" /></a>
+        <h1 id="titre_header">Réservation de vélos Nantes</h1>
+        <div class="nav_burger"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></div>
+        <div class="menu_header"><a href="#slider">Guide Aplli</a> | <a href="#carte_reservation">Réserver un vélo</a></div>
+        <div id="div_burger"><span id="close_menu"><i class="fa fa-window-close" aria-hidden="true"></i></span><a href="#carte_reservation">Carte des vélos</a><br /><a href="#divReservation">Voir ma réservation</a></div>
+    </header>
+
+    <section id="slider">
+        
+         <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    
+    <img src="images/870x489_20160523_150354.jpg" style="width:100%;object-fit: cover" >
+    <div class="text">Caption Text</div>
+  </div>
+
+  <div class="mySlides fade">
+    
+    <img src="images/830x532_nouveaux-velos-bicloo-plus-nantes.jpg" style="width:100%;object-fit: cover">
+    <div class="text">Caption Two</div>
+  </div>
+
+  <div class="mySlides fade">
+    
+    <img src="images/velo-535_1392974229299.jpg" style="width:100%;object-fit: cover">
+    <div class="text">Caption Three</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div> 
+        <!--
+        <h2></h2>
+        <div class="container">
+            <div class="carousel">
+                <div class="item a"></div>
+                <div class="item b"></div>
+                <div class="item c"></div>
+                <div class="item d"></div>
+                <div class="item e"></div>
+                <div class="item f"></div>
+            </div> 
+        </div>
+        <div class="next"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></div>
+        <div class="prev"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></div>
+        -->
+    </section>
+
+    <h1>Carte de réservation des vélos</h1>
+
+    <div id="carte_reservation">
+        <!-- Div pour l'affichage de la carte google -->
+        <div id="map"></div>
+        <!-- Div pour l'affichage des infos stations -->
+        <div id="reservation">
+            <h3>Informations sur la station</h3>
+            <ul>
+                <li>Nom de la station : <span id="nomStation"></span></li>
+                <li>Adresse : <span id="adresse"></span></li>
+                <li>Etat : <span id="etatStation"></span></li>
+                <li>Place(s) totale(s) : <span id="placesTotales"></span></li>
+                <li>Place(s) disponible(s) : <span id="placesDispo"></span></li>
+                <li>Vélo(s) disponible(s) : <span id="velosDispo"></span></li>
+            </ul>
+            <span id="text_signature">Signature électronique* :</span>
+            <canvas id="canvas">
+            <p>Désolé, votre navigateur ne supporte pas Canvas. Mettez-vous à jour</p>
+        </canvas>
+            <div class="buttons">
+                <span class="buttonClose">Fermer</span>
+                <span class="buttonEfface">Effacer</span>
+                <span class="buttonReservation">Réserver</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="divReservation"><span id="ligneStation"></span><br /><span id="ligneAdresse"></span><br /><span id="compteur"></span><br /><span class="buttonAnnul">Annuler</span></div>
+
+
+    <footer>
+        <div class="text_footer"><span class="marque"></span> - Service de locations de vélos Nantes<br />Copyright OpenClassRooms</div>
+    </footer>
+    <script src = "js/diapo.js"></script>
+</body>
+
+</html>
