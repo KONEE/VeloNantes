@@ -15,18 +15,20 @@ class Sliders {
 
       // Next/previous controls
       plusSlides(n) {
-          showSlides(slideIndex += n);
+          this.showSlides(this.slideIndex += n);
       }
 
       // Thumbnail image controls
       currentSlide(n) {
-          showSlides(slideIndex = n);
+          this.showSlides(this.slideIndex = n);
       }
 
       showSlides(n) {
-          console.log("hello");
+        //console.log("hello");
             var i;
+
             var slides = document.getElementsByClassName(this.element);
+            console.log(slides);
             var dots = document.getElementsByClassName("dot");
             if (n > slides.length) {this.slideIndex = 1}
             if (n < 1) {this.slideIndex = slides.length}
@@ -37,7 +39,7 @@ class Sliders {
                 dots[i].className = dots[i].className.replace(" active", "");
             }
             slides[this.slideIndex-1].style.display = "block";
+
             dots[this.slideIndex-1].className += " active";
         } 
     }
-//var slider = new Sliders( "mySlide");

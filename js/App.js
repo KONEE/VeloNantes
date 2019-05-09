@@ -1,7 +1,6 @@
 //console.log("hello");
-let slid = new Sliders( document.querySelector("#mySlide"));
+let slid = new Sliders("mySlides");
 slid.showSlides(3);
 
-//console.log(slides.showSlides(slideIndex));
-//showSlides(slideIndex);
-//let map = new Map("urlApi, cordonne");
+// Chargement de la carte
+leaflet.initMap();
