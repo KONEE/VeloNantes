@@ -23,7 +23,8 @@ header {
     background-color: white;
     -webkit-box-shadow: 0 0 10px black;
     box-shadow: 0 0 10px black;
-    position: fixed;
+    position: sticky;/* evolué de fixed*/
+    top: 0;
     z-index: 999;
     margin-top: -20px;
 }
@@ -112,150 +113,18 @@ header {
     margin-top: -20px;
 }
 
+footer{
+  width: 100%;
+  height: 50px;
+  background-color: black;
+}
+.text_footer{
+  color: white;
+  font-weight: bold;
+    text-align: center;
+}
 /****************** Slider *********************/
-/*.container {
-    padding-top: 150px;
-    padding-bottom: 50px;
-    margin: 0 50px 0 50px;
-    /*width: 100%;*/
-/*    height: 280px;
-    position: relative;
-   border: 2px solid black;
-   
-}
-.next,.prev {
-    font-size: 32px;
-    color: gray;
-    position: absolute;
-    top: 280px;
-    /*padding: 1em 2em;
-    cursor: pointer;
-}
 
-.next:hover,
-.prev:hover {
-    color: black;
-}
-
-.next:active,
-.prev:active {
-    top: 280px;
-}
-
-.next {
-    right: 5em;
-}
-
-.prev {
-    left: 5em;
-} */
-/*
-slider h2 {
-    display: none;
-}
-
-.container {
-    padding-top: 150px;
-    padding-bottom: 50px;
-    margin: 0 auto;
-    width: 350px;
-    height: 280px;
-    position: relative;
-    -webkit-perspective: 1500px;
-    perspective: 1500px;
-}
-
-.carousel {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-transition: -webkit-transform 1s;
-    transition: -webkit-transform 1s;
-    -o-transition: transform 1s;
-    transition: transform 1s;
-    transition: transform 1s, -webkit-transform 1s;
-}
-
-.item {
-    display: block;
-    position: absolute;
-    width: 350px;
-    height: 280px;
-    opacity: 0.95;
-    border-radius: 10px;
-}
-
-.a {
-    -webkit-transform: rotateY(0deg) translateZ(345px);
-    transform: rotateY(0deg) translateZ(345px);
-    background-image: url(../img/slide1.png);
-    background-repeat: no-repeat;
-}
-
-.b {
-    -webkit-transform: rotateY(60deg) translateZ(345px);
-    transform: rotateY(60deg) translateZ(345px);
-    background-image: url(../img/slide2.png);
-    background-repeat: no-repeat;
-}
-
-.c {
-    -webkit-transform: rotateY(120deg) translateZ(345px);
-    transform: rotateY(120deg) translateZ(345px);
-    background-image: url(../img/slide3.png);
-    background-repeat: no-repeat;
-}
-
-.d {
-    -webkit-transform: rotateY(180deg) translateZ(345px);
-    transform: rotateY(180deg) translateZ(345px);
-    background-image: url(../img/slide4.png);
-    background-repeat: no-repeat;
-}
-
-.e {
-    -webkit-transform: rotateY(240deg) translateZ(345px);
-    transform: rotateY(240deg) translateZ(345px);
-    background-image: url(../img/slide5.png);
-    background-repeat: no-repeat;
-}
-
-.f {
-    -webkit-transform: rotateY(300deg) translateZ(345px);
-    transform: rotateY(300deg) translateZ(345px);
-    background-image: url(../img/slide6.png);
-    background-repeat: no-repeat;
-}
-
-.next,
-.prev {
-    font-size: 32px;
-    color: gray;
-    position: absolute;
-    top: 280px;
-    /*padding: 1em 2em;*/
-/*    cursor: pointer;
-}
-
-.next:hover,
-.prev:hover {
-    color: black;
-}
-
-.next:active,
-.prev:active {
-    top: 280px;
-}
-
-.next {
-    right: 5em;
-}
-
-.prev {
-    left: 5em;
-} */
 
 /****************Google Map***************/
 
@@ -265,6 +134,63 @@ h1 {
     padding-bottom: 5px;
 }
 
+
+/* Map*/
+
+#map {
+  margin: 20px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+#googleMap {
+  width: 70%;
+  height: 400px;
+}
+
+/************************************************************/
+
+/* Aside */
+
+aside {
+  font-size: 0.9em;
+  overflow-wrap: normal;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+#stationDetails {
+  width: 30%;
+  word-wrap: break-word;
+}
+
+#details {
+  border: 2px solid #ffb74d;
+  -webkit-box-shadow: 2px 2px 2px 2px #ffb74d;
+  box-shadow: 2px 2px 2px 2px #ffb74d;
+  border-radius: 10px;
+  background-color: #207ac9;
+  height: 100%;
+  text-align: center;
+  line-height: 1.9;
+}
+
+#btn {
+  border-radius: 10%;
+  -webkit-box-shadow: 1px 1px 1px 0px #FFA726;
+  box-shadow: 1px 1px 1px 0px #FFA726;
+  border: 2px solid #FFA726;
+  background-color: #f9f4f4;
+  cursor: pointer;
+  padding: 5px;
+  font-weight: 700;
+}
+
+/*
 #carte_reservation {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -275,13 +201,12 @@ h1 {
 
 #map {
     width: 100%;
-    height: 700px;
+    height: 200px;
     border: 0;
     background-color: lightgray;
 }
-
-/*************************** FORMULAIRE ************************/
-
+*/
+/*************************** FORMULAIRE ********************
 #reservation {
     display: none;
     background-color: rgb(235, 239, 243);
@@ -410,11 +335,12 @@ footer {
 .marque {
     color: black;
 }
+****/
 
 
 
 
-/*********************************************************************************/
+/*******************************slider**************************************************/
 
  * {box-sizing:border-box}
 /* Slideshow container */
@@ -426,11 +352,13 @@ footer {
   
     margin: 0px 50px 0px 50px;
     /*width: 100%;*/
-    height: 280px;
+    /*height: 280px;*/
     position: relative;
    border: 2px solid black;
 }
-
+.slidee img {
+    height: 70vh;
+}
 /* Hide the images by default */
 .mySlides {
   display: none;
@@ -483,12 +411,15 @@ footer {
   top: 0;
 }
 
-/* The dots/bullets/indicators */
+/* The dots/bull9+
+
 .dot {
-  cursor: pointer;
+  cursor: pointe9+
+
   height: 15px;
   width: 15px;
-  margin: 0 2px;
+  margin: 0 2px;9+
+
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
