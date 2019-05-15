@@ -4,3 +4,5 @@ slid.showSlides(3);
 
 // Chargement de la carte
 leaflet.initMap();
+
+let compte = new compt();

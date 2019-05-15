@@ -3,15 +3,11 @@
 class Sliders {
        //var slideIndex = 1;
         constructor(element) {
-           // var slideIndex = 1;
-          //slideIndex;
+           
           this.slideIndex = 3;
           this.element = element;
 
         }
-
-      
-    
 
       // Next/previous controls
       plusSlides(n) {
@@ -41,5 +37,5 @@ class Sliders {
             slides[this.slideIndex-1].style.display = "block";
 
             dots[this.slideIndex-1].className += " active";
-        } 
-    }
+      } 
+ }

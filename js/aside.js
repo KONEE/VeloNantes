@@ -93,6 +93,13 @@ var aside = {
       document.getElementById("btn").removeAttribute("disabled");
     }
 
+    //Ajout d'un écouteur d'événement sur le bouton de réservation (apparition du canvas) 
+    buttonElt.addEventListener("click", function () {
+      canvas.init(station);
+
+      //Désactivation du bouton de réservation si canvas 
+      document.getElementById("btn").disabled = true;
+    });
     
   }
 };
