@@ -158,11 +158,11 @@ var canvas = {
         document.getElementById("reservationVelo").appendChild(clientElt);
         var y = document.createElement("INPUT");
               y.setAttribute("type", "text");
-              y.setAttribute("value", "Nom")
+              y.setAttribute("placeholder", "Nom")
         document.getElementById("client").appendChild(y);
         var z = document.createElement("INPUT");
               z.setAttribute("type", "text");
-              z.setAttribute("value", "Prenom")
+              z.setAttribute("placeholder", "Prenom")
         document.getElementById("client").appendChild(z);
         
     },
