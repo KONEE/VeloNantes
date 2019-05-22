@@ -187,7 +187,7 @@ var canvas = {
             reservationVelo.removeChild(document.getElementById("confirmation"));
             reservationVelo.removeChild(document.getElementById("clear"));
             reservationVelo.removeChild(document.getElementById("client"));
-            
+            console.log(station);
 
             // validation visible
             var validation = document.getElementById("validation")
@@ -199,7 +199,7 @@ var canvas = {
 
             // Demarrage du décompte de 20 min. après confirmation
             sessionStorage.clear();
-            new compt().decompte(station);
+           // new Compt().decompte(station);
         
         });
     }
