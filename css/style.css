@@ -1,40 +1,47 @@
+* {
+  box-sizing:border-box
+  width: 100%;
+  }
 html,body {
     height: 100%;
     margin: 0;
     padding: 0;
     background-color: lightgray;
+    z-index: 5;
 }
 
+/***************************************header*************************/
 header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    text-transform: uppercase;
+    background-color: #FFF;
+    padding: 16px 0 0 32px;
+    font-size: 15px;
+    box-shadow: 0 1px 16px rgba(0, 0, 0, .4);
     width: 100%;
-    height: 110px;
-    border-bottom: 1px solid rgba(200, 200, 200, 0.5);
-    background-color: white;
-    -webkit-box-shadow: 0 0 10px black;
-    box-shadow: 0 0 10px black;
-    position: sticky;/* evolué de fixed*/
-    top: 0;
+    position: fixed;
     z-index: 999;
-    margin-top: -20px;
+   
+    margin-top: -50px;
+}
+#logoh1{
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+      padding: 16px 0 0 0;
+
+}
+
+#logo, nav, li {
+    display: inline-block;
 }
 
 #logo {
-    padding-left: 25px;
-    margin: 15px 0 0 35px;
-    width: 150px;
-    height: 70px;
+    background-color: #2196F3;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    margin-top: 20px;
 }
-
 #titre_header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -45,72 +52,204 @@ header {
     align-items: center;
 }
 
-.menu_header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    padding-right: 30px;
-    font-weight: bold;
-    font-size: 24px;
+nav {
+    display: inline-block;
+    line-height: 48px;
+    vertical-align: top;
 }
 
-.menu_header a {
-    text-align: right;
-    padding: 5px;
-    font-weight: bold;
-    font-size: 24px;
+li {
+    margin-left: 32px;
+}
+li a, .button {
     text-decoration: none;
-    color: black;
+    color: #333;
 }
 
-.nav_burger {
-    display: none;
-}
-
-#div_burger {
-    width: 200px;
-    height: 100px;
-    margin: 10px;
-    padding-top: 30px;
-    padding-left: 30px;
-    background-color: #222222;
-    border: 1px solid black;
-    border-radius: 20px;
-    position: absolute;
-    display: none;
-}
-
-#div_burger a {
-
-    display: -webkit-box;
-
-    display: -ms-flexbox;
-
-    display: flex;
-    color: white;
+.button {
+    text-transform: uppercase;
+    float: right;
+    margin-top: -16px;
+    line-height: 84px;
+    height: 84px;
     text-decoration: none;
-    
-    font-size: 20px;
+    padding: 0 16px;
+    margin-right: 2%;
+}
+.button-sign-up {
+    background-color: #EEE;
+}
+
+
+#hamburger, #hamburger-content {
+    display: inline;
+}
+
+#hamburger-button {
+    display: none;
     cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 30px;
+    vertical-align: top;
+    padding: 0;
+    line-height: 47px;
+    float: right;
+    margin-right: 32px;
 }
 
-#div_burger a:hover {
-
-    font-weight: 900;
+#hamburger-overlay {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
 }
 
-.fa-window-close {
-    color: white;
+#hamburger-sidebar {
+    display: none;
+    position: fixed;
+    width: 84%;
+    z-index: 20;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #FFF;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform .2s ease-out;
+}
+#hamburger-sidebar li {
+    display: block;
+}
+#hamburger-sidebar-header {
+    background: url(../images/sidebar-header.png) center;
+    background-size: cover;
+    height: 128px;
+}
+#hamburger-sidebar-body {
+    padding: 16px 8px;
+}
+#hamburger-sidebar-body li:before {
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 4px;
+    margin-right: 16px;
+    width: 24px;
+    height: 24px;
+}
+#hamburger-sidebar-body li:first-child:before {
+    background-image: url(../images/icons/discover.svg);
+}
+#hamburger-sidebar-body li:nth-child(2):before {
+    background-image: url(../images/icons/how.svg);
+}
+#hamburger-sidebar-body li:nth-child(3):before {
+    background-image: url(../images/icons/about.svg);
+}
+#hamburger-sidebar-body li:last-child:before {
+    background-image: url(../images/icons/qna.svg);
+}
+#hamburger-sidebar-body .button {
+    margin-top: 16px;
+    text-align: center;
+    float: none;
+    display: block;
+    height: auto;
+    line-height: inherit;
+    padding: 10px;
 }
 
-#close_menu {
-    position: absolute;
-    margin-left: 170px;
-    margin-top: -20px;
+/*******************************slider**************************************************/
+
+ 
+/* Slideshow container */
+.slideshow-container {  
+   margin: 0px 50px 0px 50px;
+    /*width: 100%;*/
+    /*height: 280px;*/
+    position: relative;
+   box-shadow: 2px 2px 2px 2px /*#ffb74d*/#e97c54;
+   padding-top: 140px;
 }
+.slidee img {
+    height: 70vh;
+}
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 60%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/**********************footer*******************************/
 
 footer{
   width: 100%;
@@ -128,7 +267,7 @@ footer{
 
 /****************Map***************/
 
-h1 {
+#h1Map {
     text-align: center;
     padding-top: 25px;
     padding-bottom: 5px;
@@ -190,96 +329,6 @@ aside {
   padding: 5px;
   font-weight: 700;
 }
-
-
-
-
-
-
-/*******************************slider**************************************************/
-
- * {box-sizing:border-box}
-/* Slideshow container */
-.slideshow-container {  
-   margin: 0px 50px 0px 50px;
-    /*width: 100%;*/
-    /*height: 280px;*/
-    position: relative;
-   box-shadow: 2px 2px 2px 2px /*#ffb74d*/#e97c54;
-}
-.slidee img {
-    height: 70vh;
-}
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
 
 
 /*************************************************************/
@@ -363,4 +412,104 @@ display: none;
   margin: 10px 23px;
   -webkit-box-shadow: 1px 1px 1px 0 /*#FFA726*/#e97c54;
   box-shadow: 2px 2px 2px 0 /*#FFA726*/#e97c54;
+}
+
+
+
+/****************************************************************************************
+************************************* RESPONSIVE ****************************************
+****************************************************************************************/
+
+ 
+@media screen and (max-width: 1024px) {
+    
+
+    #hamburger-content {
+        display: none;
+    }
+
+    #hamburger-button, #hamburger-sidebar,
+    .hamburger-activated #hamburger-overlay {
+        display: block;
+    }
+
+    .hamburger-activated #hamburger-sidebar {
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width:800px){
+   header {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    
+    #hamburger-button {
+    margin-right: 72px;
+   } 
+   #titre_header {
+    padding-left: 10px;
+    color: #e97c54;
+   }
+  #h1Map{
+    color: #e97c54;
+  } 
+    
+    .slideshow-container {  
+   margin: 0;
+   padding-top: 115px;
+}
+
+  #map {
+    flex-direction: column;
+  }
+  #googleMap{
+    width: 90%;
+    margin: auto;
+  }
+ #stationDetails{
+  width: 50%;
+  margin: auto;
+ }
+ #client {
+  right: 55%;
+ }
+ #confirmation  {
+  left: 35%;
+ }
+ #clear{
+  right: 35%;
+ }
+
+
+}
+
+@media screen and (max-width:400px){
+    .slideshow-container {  
+  
+   padding-top: 113px;
+}
+   #hamburger-button {
+    margin-right: 72px;
+   } 
+   #titre_header {
+    padding-left: 10px;
+   }
+   #h1Map{
+    font-size: 1.3em;
+  } 
+   #client {
+  right: 60%;
+ }
+    #confirmation  {
+  left: 15%;
+ }
+ #clear{
+  right: 15%;
+ }
+ /*#validation{
+  margin: 10px auto;
+ }*/
 }
