@@ -187,7 +187,9 @@ var canvas = {
             reservationVelo.removeChild(document.getElementById("confirmation"));
             reservationVelo.removeChild(document.getElementById("clear"));
             reservationVelo.removeChild(document.getElementById("client"));
-            console.log(station);
+            //console.log(station);
+            //les valeur des input et stacker dans la sesseion var valeur = jQuery(#champTexte).val(); //La variable valeur reçoit le contenu de la textarea.
+            let mr = $(#input).val();
 
             // validation visible
             var validation = document.getElementById("validation")
@@ -199,7 +201,8 @@ var canvas = {
 
             // Demarrage du décompte de 20 min. après confirmation
             sessionStorage.clear();
-           // new Compt().decompte(station);
+            //new Compt().decompte(station);
+            compte.decompte(station);
         
         });
     }

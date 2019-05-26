@@ -30,8 +30,13 @@ class Compt {
 	      
 
 	display() {
-		this.timerElt.textContent = "Pas de réservation en cours...";
-		//console.log("hello");
+		
+		if ( sessionStorage.length > 0){
+			this.timerElt.textContent = "vous avez une reseversatin en cours " + sessionStorage.getItem("name");
+		}else{
+			this.timerElt.textContent = "Pas de réservation en cours...";
+		}
+		
 	}
 
 	// Décompte de 20 minutes lorsqu'il y a une réservation validée
@@ -39,7 +44,7 @@ class Compt {
 	decompte (station) {
 		clearInterval(this.interval);
 		this.save(station.name, this.duration);
-		console.log(station);
+		
 		//var duration = 1200;
 		//var durationRefresh = sessionStorage.durationRefresh;
 		//console.log(this);
@@ -58,7 +63,7 @@ class Compt {
 			if (sessionStorage.length > 0) {
 				//this.duration = durationRefresh;
 				//duration = durationRefresh;
-				console.log("this");
+			
 				duration = durationActu;
 				tps = convert(durationActu);
 				this.timerElt.textContent = "Vous avez déjà une réservation à la station: " + station + " pour une durée de " + tps[0] + " min " + tps[1] + " s.";
@@ -97,6 +102,9 @@ class Compt {
 		window.addEventListener("unload", function () {
 			sessionStorage.setItem("name", name)
 			sessionStorage.setItem("durationActu", this.duration);
+			//console.log(sessionStorage);
 		});
 	}
 }
+
+//jslint et apres configurattion !
