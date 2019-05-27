@@ -269,7 +269,8 @@ footer{
 
 #h1Map {
     text-align: center;
-    padding-top: 25px;
+    /*padding-top: 25px;*/
+    padding-top: 130px;
     padding-bottom: 5px;
 }
 
