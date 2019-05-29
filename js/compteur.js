@@ -5,30 +5,13 @@ class Compt {
 		constructor(){
 			 this.timerElt = document.getElementById("validation");
 			 this.duration = 1200;
-			 //this.duration = sessionStorage.getItem("1200");
 			 this.display();
-			// this.decompte(this.name);
-			 //this.name = sessionStorage.getItem("name");
-
-			 //this.interval = 20;
-		/*	if (sessionStorage.length > 0) {
-					// Vérification si données enregistrées dans sessionStorage
-					this.getItem(this.name, this.duration);
-					//console.log(sessionStorage.getItem("name"));
-					// Si oui,lancement du temps restant au moment de l'actualisation de la page
-					this.decompte(this.name, this.duration);
-				} else {
-					this.display();
-				}*/
+			
 		}
 
-		// Renvoie d'éventuelles données enregistrées
-	/*getItem(name, duration) {
-		this.name = sessionStorage.getItem("name");
-		this.duration = sessionStorage.getItem("duration");
-	}*/
+		
 	      
-
+// Enregistrement des données si actualisation de la page du navigateur
 	display() {
 		
 		if ( sessionStorage.length > 0){
@@ -45,24 +28,18 @@ class Compt {
 		clearInterval(this.interval);
 		this.save(station.name, this.duration);
 		
-		//var duration = 1200;
-		//var durationRefresh = sessionStorage.durationRefresh;
-		//console.log(this);
-		//let durationActu = sessionStorage.getItem("duration");
-
+		
 		this.interval = setInterval(function () {
 			let tps = this.convert(this.duration);
 			//console.log(this);
-			this.timerElt.textContent = "Merci de votre confiance Mr"+ /* canvas.clients().y.value + */"Votre reservation est à la station: " + station.name + " pour une durée de " + tps[0] + " min " + tps[1] + " s." ;
+			this.timerElt.textContent = "Merci de votre confiance !!! "/*+ user*/  + "Votre reservation est à la station: " + station.name + " pour une durée de " + tps[0] + " min " + tps[1] + " s." ;
 			this.duration--;
 
-			// Enregistrement des données si actualisation de la page du navigateur
-			//this.save(station.name, this.duration);
+			
 
 			// Temps restant après une actualisation de la page du navigateur
 			if (sessionStorage.length > 0) {
-				//this.duration = durationRefresh;
-				//duration = durationRefresh;
+				
 			
 				duration = durationActu;
 				tps = convert(durationActu);
@@ -71,10 +48,9 @@ class Compt {
 				//this.save(station, durationActu);
 			}
 
-			// Décompte terminé
+			// Décompte terminé,arret
 			if (this.duration < 0) {
-				// Arrêt du décompte
-				//clearInterval(interval);
+				
 				// Effacement des données éventuelles dans sessionStorage
 				sessionStorage.clear();
 				// Réinitialisation de l'affichage de la page
