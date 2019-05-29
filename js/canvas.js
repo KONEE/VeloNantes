@@ -1,6 +1,7 @@
 var dessinElt;
 var context;
 var lastPt = null;
+/*var user;*/
 
 // Objet canvas
 var canvas = {
@@ -157,6 +158,7 @@ var canvas = {
         clientElt.id = "client";
         document.getElementById("reservationVelo").appendChild(clientElt);
         var y = document.createElement("INPUT");
+                y.setAttribute("id", "idUser");
               y.setAttribute("type", "text");
               y.setAttribute("placeholder", "Nom")
         document.getElementById("client").appendChild(y);
@@ -189,7 +191,8 @@ var canvas = {
             reservationVelo.removeChild(document.getElementById("client"));
             //console.log(station);
             //les valeur des input et stacker dans la sesseion var valeur = jQuery(#champTexte).val(); //La variable valeur reçoit le contenu de la textarea.
-            let mr = $(#input).val();
+            //var mr = $(#idNom).val();var 
+            // user = document.getElementById("idUser").value;
 
             // validation visible
             var validation = document.getElementById("validation")
@@ -201,7 +204,6 @@ var canvas = {
 
             // Demarrage du décompte de 20 min. après confirmation
             sessionStorage.clear();
-            //new Compt().decompte(station);
             compte.decompte(station);
         
         });
