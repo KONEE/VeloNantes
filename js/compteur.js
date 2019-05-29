@@ -23,7 +23,7 @@ class Compt {
 	}
 
 	// Décompte de 20 minutes lorsqu'il y a une réservation validée
-	/*decompte (station, duration)*/
+	
 	decompte (station) {
 		clearInterval(this.interval);
 		this.save(station.name, this.duration);
