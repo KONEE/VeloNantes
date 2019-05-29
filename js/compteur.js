@@ -35,19 +35,6 @@ class Compt {
 			this.timerElt.textContent = "Merci de votre confiance !!! "/*+ user*/  + "Votre reservation est à la station: " + station.name + " pour une durée de " + tps[0] + " min " + tps[1] + " s." ;
 			this.duration--;
 
-			
-
-			// Temps restant après une actualisation de la page du navigateur
-			if (sessionStorage.length > 0) {
-				
-			
-				duration = durationActu;
-				tps = convert(durationActu);
-				this.timerElt.textContent = "Vous avez déjà une réservation à la station: " + station + " pour une durée de " + tps[0] + " min " + tps[1] + " s.";
-				durationActu--;
-				//this.save(station, durationActu);
-			}
-
 			// Décompte terminé,arret
 			if (this.duration < 0) {
 				
@@ -77,7 +64,7 @@ class Compt {
 	save(name, duration) {
 		window.addEventListener("unload", function () {
 			sessionStorage.setItem("name", name)
-			sessionStorage.setItem("durationActu", this.duration);
+			//sessionStorage.setItem("durationActu", this.duration);
 			//console.log(sessionStorage);
 		});
 	}
