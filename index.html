@@ -10,7 +10,8 @@
     <!--Feuille de style générale et responsive-->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
-
+    <!-- Affichage des fantawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous" />
 
  <!-- Make sure you put this AFTER Leaflet's CSS --> <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
     <!--Feuille de style awesome -->
@@ -90,7 +91,94 @@
                 </div> 
         
     </section>
+    <section id="price">
+        <div></div>
+        <div id="description">
+            <p >
+              
+                Louer un vélo à Nantes autrement ...<br>
 
+                Nantes Bike vous propose plusieurs manières pour location d’un vélo à Nantes.
+                Nous mettons à disposition tout ce dont vous avez besoin pour faire vos propres balades à vélo dans Nantes.
+                Nos vélos sont légers, récents et confortables. Les équipements de conforts et de sécurité sont également proposés sur demande : casques, panier, poncho sièges-enfant, plan des pistes cyclables à Nantes.
+                Avec bientôt 200 km de pistes cyclables, Nantes est devenue « une ville à vélo ».
+                Nous disposons également de vélos électriques à notre agence situé à Nantes centre.
+  
+            </p>
+        </div>
+        <h1 id="h1Tarif">Nos tarifs de location de vélos </h1>
+        <div id="tarif">
+            <div class="accordeon">
+                 <h3>Location de vélo Station</h3>
+                 <div class="prix">
+                    <div class="prix-location" >
+                            <p>1/2 journée<span class="price-big">8€ *</span></p>
+                            <p>Journée (8h) <span class="price-big">13€ *</span></p>
+                            <p>Journée (24h) <span class="price-big">20€</span></p>
+                            <p>Jour sup <span class="price-big">5€</span></p>
+                            <p><span class="aster">* + 1€ week-end</span></p>
+                    </div>
+                    <div class="prix-accessoires" >
+                        <h3>Accessoires</h3>
+                            <ul>
+                                <li>Sur demande : casque, panier 1€ par jour / article</li>
+                                <li>Siège enfant 3€ par jour / 2€ jour Sup</li>
+                            </ul>
+                    </div>
+                    <div id="promoWeek"  >
+                            <h4>Offre spéciale Week-end</h4>
+                            <p class="price-week">15€</p>
+                            <p>Accessoires offerts<br>
+                            (siège enfant non inclus)</p>
+                    </div>
+                    <div class="reserver" >
+                        <a class="simple-button" href="">Réservez un vélo</a>
+                    </div>
+                 </div>
+            </div>
+
+            <div class="accordeon">
+                 <h3>Location vélo électrique </h3>
+                <div class="prix">
+                    <div id="coul" class="prix-location" >
+                             <p>Tarif ½ journée :<span class="price-big">13€</span></p>
+                            <p>Journée 8h :<span class="price-big">20€</span></p>
+                            <p>Journée (24h) :<span class="price-big">30€</span></p>
+                            <p>Journée suppl. :<span class="price-big">15€</span></p>
+                            <p class="offer">Casque, panier offerts</p>
+                    </div>
+                    <div class="commentaire" >
+                        <p>Nos vélos électriques vous permettront de découvrir Nantes et sa région sans effort. Avec une autonomie de 90km, vous pourrez explorer Nantes et ses environs, Réze, saint sebastian….en toute tranquillité.
+                        </p>
+                    </div>
+                    <div class="reserver" >
+                        <a class="simple-button" href="">Réservez un vélo</a>
+                    </div>
+            </div>
+            </div>
+            <div class="accordeon">
+                 <h3>Location de vélo à domicile.</h3>
+                 <div class="prix">
+                    <div class="prix-location" >
+                         <p>1 jour (min. 2 vélos)<span class="price-big">15€ /vélo</span>+15€/jour suppl.</p>
+                            <p>Vélo électrique :<span class="price-big">30€ /vélo</span>+15€/jour suppl.</p>
+                            <p>Livraison&nbsp;: 50€ (à partir de 9h)<br>
+                            Enlèvement&nbsp;: 50€ (jusqu’à 21h)<br>
+                            Casque et panier offerts</p>
+                    </div>
+                    <div class="commentaire" >
+                        <p>Sur simple appel téléphonique au 01 00 00 00, ou en remplissant le formulaire de réservation, vous obtenez un vélo livré le matin, chez vous ou à votre hôtel.</p>
+                            <p>La remise du vélo a lieu au même endroit, le soir.</p>
+                            <p>Réservation obligatoire, au minimum 24H à l’avance.</p>
+                    </div>
+                    <div class="reserver" >
+                        <a class="simple-button" href="">Réservez un vélo</a>
+                    </div>
+                 </div>
+            </div>
+        </div>
+        
+    </section>
     <h1 id="h1Map">Carte de réservation des vélos</h1>
 
     <section id="map">
@@ -109,6 +197,45 @@
         
 
     <footer>
+        <div id="footer1">
+            <div id="adress" class="wrap-footer1">
+                <h2>Bike Nantes </h2>
+                <p>
+                    <i class="fas fa-map-marker-alt"> :10 rue samuel de champlain <br>
+                    44300 Nantes </i> <br><br>
+                    <i class="fas fa-phone-volume">: 00 00 00 00 00</i> <br><br>
+                    <!--
+                    <i class="fas fa-at">: bike.reservation.com</i> -->
+                    <i class="far fa-envelope"> : bikenantes.reservation.com </i>
+
+
+                </p>
+            </div>
+            <div id="video" class="wrap-footer1">
+                <h2>Une video pour la bonne pratique</h2>
+                <video width="400" height="200" controls="controls" controls autoplay="autoplay" controls muted="muted " controls loop="loop"/>
+                      <source src="images/Nouveau à Nantes  le vélo canyoning urbain.mp4" type="video/mp4" />
+                      <source src=".webm" type="video/webm" />
+                      <source src=".ogv" type="video/ogg" />
+                      Vous n'avez pas de navigateur moderne, donc pas de balise video HTML5 !
+                </video>
+
+            </div>
+            <div id="reseau-sociaux" class="wrap-footer1">
+                <h2>Bike Nantes sur :</h2>
+                <i class="fab fa-facebook-f"></i> 
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-whatsapp"></i> <br>
+                <h3>Nous contacter </h3>
+                <form id="formulairee">
+                    <input type="text" placeholder="Nom">
+                    <textarea type="text" placeholder="votre Message"></textarea>
+                    <p><a href="#" class="send" title="Envoyer">Send Message</a></p>
+                </form>
+            </div>
+
+        </div>
         <div id="footerr" class="text_footer"> Service de locations de vélos Nantes<br />Copyright KONE</div>
     </footer>
     <script
