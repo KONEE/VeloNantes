@@ -3,7 +3,9 @@
 
 ////////////////////new::::::::::::::::::::::::::::::::::::::::::::::::::::::
 var googleMap;
-
+/*navigator.geolocation.getCurrentPosition(function(position){
+  console.log(position);
+});*/
 var leaflet = {
  // Creating map options//Initialisation de la carte
         initMap: function(){
@@ -40,8 +42,9 @@ var leaflet = {
           var clear = document.getElementById("stationDetails");
           while (clear.firstChild) {
             clear.removeChild(clear.firstChild);
+            
           }
-
+          clear.style.display="block";
           // Affichage des informations sur la station désirée
           aside.init(station);
         });

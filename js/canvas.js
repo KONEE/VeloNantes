@@ -184,7 +184,9 @@ var canvas = {
 
         // Ajout d'un écouteur d'évènement sur le bouton de confirmation (lancement du décompte)
         confirmElt.addEventListener("click", function () {
+            let user = document.getElementById("idUser").value;
             // Remplacement d'un précédent canvas éventuel
+
             reservationVelo.removeChild(document.getElementById("canvas"));
             reservationVelo.removeChild(document.getElementById("confirmation"));
             reservationVelo.removeChild(document.getElementById("clear"));
@@ -192,7 +194,9 @@ var canvas = {
             //console.log(station);
             //les valeur des input et stacker dans la sesseion var valeur = jQuery(#champTexte).val(); //La variable valeur reçoit le contenu de la textarea.
             //var mr = $(#idNom).val();var 
-            // user = document.getElementById("idUser").value;
+            
+            //let user = $("#idUser");
+            console.log(user);
 
             // validation visible
             var validation = document.getElementById("validation")
@@ -204,7 +208,7 @@ var canvas = {
 
             // Demarrage du décompte de 20 min. après confirmation
             sessionStorage.clear();
-            compte.decompte(station);
+            compte.decompte(station,user);
         
         });
     }
