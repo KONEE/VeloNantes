@@ -1,6 +1,9 @@
 // Chargement sliders
-let slid = new Sliders("mySlides");
+let slid = new Slider("mySlides");
 slid.showSlides(3);
+// Chargement Guide slider
+let guid = new Guide("texte");
+guid.guideAppli();
 // Chargement de la carte
 leaflet.initMap();
 // Chargement de compteur
