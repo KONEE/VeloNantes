@@ -157,15 +157,15 @@ var canvas = {
         var clientElt = document.createElement("FORM");
         clientElt.id = "client";
         document.getElementById("reservationVelo").appendChild(clientElt);
-        var y = document.createElement("INPUT");
-        y.setAttribute("id", "idUser");
-        y.setAttribute("type", "text");
-        y.setAttribute("placeholder", "Nom")
-        document.getElementById("client").appendChild(y);
-        var z = document.createElement("INPUT");
-        z.setAttribute("type", "text");
-        z.setAttribute("placeholder", "Prenom")
-        document.getElementById("client").appendChild(z);
+        var inputNom = document.createElement("INPUT");
+        inputNom.setAttribute("id", "idUser");
+        inputNom.setAttribute("type", "text");
+        inputNom.setAttribute("placeholder", "Nom")
+        document.getElementById("client").appendChild(inputNom);
+        var inputPrenom = document.createElement("INPUT");
+        inputPrenom.setAttribute("type", "text");
+        inputPrenom.setAttribute("placeholder", "Prenom")
+        document.getElementById("client").appendChild(inputPrenom);
 
     },
 
