@@ -1022,6 +1022,11 @@
       width: 33.33%;
       text-align: center;
   }
+  video{
+    width : 400px ;
+    height : 200px ;
+    
+  }
 
   .fab {
 
